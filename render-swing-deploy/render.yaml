@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: supermarket-swing-desktop
+    runtime: docker
+    plan: starter
+    healthCheckPath: /
+    envVars:
+      - key: VNC_PASSWORD
+        sync: false
+    disk:
+      name: supermarket-data
+      mountPath: /var/data
+      sizeGB: 1
